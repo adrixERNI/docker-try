@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  linkedout:
+    build: ./node
+    container_name: linkedout
+    ports:
+      - "3000:3000"
+    working_dir: /app
+    command: npm start 
+
+  nginx:
+    build: ./nginx
+    container_name: nginx-server
+    ports:
+      - "80:80"
+    depends_on:
+      - linkedout
