@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   linkedout:
-    build: ./node
+    build: ./Node
     container_name: linkedout
     ports:
       - "3000:3000"
